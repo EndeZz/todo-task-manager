@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Content } from './containers/Content';
+import { Sidebar } from './containers/Sidebar';
+import { Container, Main } from './styles';
 
 export const App = () => {
   return (
-    <div>init</div>
+    <Container>
+      <Main>
+        <Sidebar />
+        <Content />
+      </Main>
+    </Container>
   );
-}
+};

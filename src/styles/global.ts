@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
     font-weight: ${({ theme }) => theme.typography.regular};
-    background-color: ${({ theme }) => theme.colors.light};
+    background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.txt};
   }
 
