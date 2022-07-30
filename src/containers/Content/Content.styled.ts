@@ -4,7 +4,7 @@ export const ContentWrapper = styled.section`
   width: 100%;
   height: 100%;
   padding: 30px 43px 30px 53px;
-  overflow: auto;
+  overflow: hidden;
 `;
 
 export const Title = styled.h1`
@@ -23,4 +23,6 @@ export const ContentList = styled.ul`
   font-size: 1.8rem;
   line-height: 2.2rem;
   margin-top: 32px;
+  height: 75%;
+  overflow-y: auto;
 `;

@@ -19,6 +19,24 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
+    /* Works on Firefox*/
+      scrollbar-color: ${({ theme }) => theme.colors.primary};
+      scrollbar-width: thin;
+      /* Works on Chrome, Edge, and Safari*/
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        border-radius: 15px;
+        background-color: ${({ theme }) => theme.colors.gray100};
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.colors.gray200};
+        border-radius: 15px;
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.primaryHover};
+      }
+    }
+
     &::selection {
       color: #fff;
       background-color: ${({ theme }) => theme.colors.primary};

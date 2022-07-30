@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const TaskItem = styled.li`
   display: flex;
   justify-content: space-between;
+  margin-right: 10px;
 
   & button {
     visibility: hidden;
