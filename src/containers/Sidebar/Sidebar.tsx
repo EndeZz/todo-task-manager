@@ -1,16 +1,17 @@
 import { FC } from 'react';
-import { SidebarList, SidebarWrapper } from './Sidebar.styled';
+import { sidebarCategories } from '../../constants/sidebarCategories';
+import { SidebarLink, SidebarList, SidebarWrapper } from './Sidebar.styled';
+import { v4 as createId } from 'uuid';
 
-interface SidebarProps {}
-
-export const Sidebar: FC<SidebarProps> = () => {
+export const Sidebar: FC = () => {
   return (
     <SidebarWrapper>
       <SidebarList>
-        <li>All</li>
-        <li>Groceries</li>
-        <li>College</li>
-        <li>Payments</li>
+        {sidebarCategories.map((category) => (
+          <li key={createId()}>
+            <SidebarLink to={`/${category}`}>{category}</SidebarLink>
+          </li>
+        ))}
       </SidebarList>
     </SidebarWrapper>
   );

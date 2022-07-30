@@ -6,7 +6,7 @@ export const Label = styled.label`
   cursor: pointer;
 `;
 
-export const CheckboxContainer = styled.div`
+export const CheckboxWrapper = styled.div`
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -43,7 +43,7 @@ export const StyledCheckbox = styled.div<{ checked: boolean }>`
   transition: all 150ms;
 
   ${Icon} {
-    visibility: ${(props) => (props.checked ? 'visible' : 'hidden')};
+    visibility: ${({ checked }) => (checked ? 'visible' : 'hidden')};
   }
 `;
 

@@ -1,19 +1,33 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const SidebarWrapper = styled.aside`
   border-right: 1px solid ${({ theme }) => theme.colors.line};
-  width: 209px;
+  width: 100%;
+  min-width: 209px;
+  max-width: 209px;
   height: 100%;
   padding: 0 51px;
 `;
 
 export const SidebarList = styled.ul`
   font-size: 2.2rem;
-  font-weight: ${({ theme }) => theme.typography.bold};
+  font-weight: ${({ theme }) => theme.typography.regular};
   line-height: 2.6rem;
   color: ${({ theme }) => theme.colors.gray400};
   display: flex;
   flex-direction: column;
   gap: 24px;
   margin-top: 139px;
+`;
+
+export const SidebarLink = styled(NavLink)`
+  &.active {
+    font-weight: ${({ theme }) => theme.typography.bold};
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `;

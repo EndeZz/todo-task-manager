@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import {
   Caption,
-  CheckboxContainer,
+  CheckboxWrapper,
   HiddenCheckbox,
   Icon,
   Label,
@@ -25,14 +25,15 @@ export const Checkbox: FC<CheckboxProps> = ({
 }) => {
   const content = (
     <>
-      <CheckboxContainer className={className}>
+      <CheckboxWrapper className={className}>
         <HiddenCheckbox checked={isChecked} {...attrs} />
         <StyledCheckbox checked={isChecked}>
           <Icon viewBox="0 0 24 24">
             <polyline points="20 6 9 17 4 12" />
           </Icon>
         </StyledCheckbox>
-      </CheckboxContainer>
+      </CheckboxWrapper>
+
       <Caption>{label}</Caption>
     </>
   );

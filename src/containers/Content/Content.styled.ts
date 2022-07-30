@@ -14,7 +14,7 @@ export const Title = styled.h1`
   margin-bottom: 25px;
 `;
 
-export const TodoList = styled.ul`
+export const ContentList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -23,25 +23,4 @@ export const TodoList = styled.ul`
   font-size: 1.8rem;
   line-height: 2.2rem;
   margin-top: 32px;
-`;
-
-export const TodoItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const TodoContent = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 18px;
-`;
-
-export const TodoCaption = styled.span`
-  padding: 5px 19px;
-  border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.light};
-  font-weight: ${({ theme }) => theme.typography.regular};
-  font-size: 1.2rem;
-  line-height: 1.4ssrem;
 `;
