@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getLocalStorage } from '../../utils/localStorage';
 import { ITask } from '../../models/ITask';
 
 interface taskState {
@@ -6,7 +7,7 @@ interface taskState {
 }
 
 const initialState: taskState = {
-  taskList: [],
+  taskList: getLocalStorage('store'),
 };
 
 export const taskSlice = createSlice({
