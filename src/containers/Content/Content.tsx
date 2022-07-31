@@ -1,6 +1,7 @@
 import React, { FC, useCallback, useState } from 'react';
 import { Form } from '../../components/Form';
 import { InputField } from '../../components/Input';
+import { sidebarCategories } from '../../constants/sidebarCategories';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { useCategoryPath } from '../../hooks/useCategoryPath';
@@ -52,7 +53,7 @@ export const Content: FC = () => {
         completed: false,
         description: inputValues,
         category:
-          categoryName === 'All'
+          Object.keys(sidebarCategories)[0] === categoryName
             ? 'Uncategorized'
             : (categoryName as CategoryType),
       };
@@ -79,7 +80,7 @@ export const Content: FC = () => {
       </Form>
 
       <ContentList>
-        {taskList && categoryName === 'All'
+        {Object.keys(sidebarCategories)[0] === categoryName
           ? taskList.map((item) => (
               <ContentItem
                 key={item.id}

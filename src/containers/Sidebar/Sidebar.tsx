@@ -7,9 +7,11 @@ export const Sidebar: FC = () => {
   return (
     <SidebarWrapper>
       <SidebarList>
-        {sidebarCategories.map((category) => (
+        {Object.entries(sidebarCategories).map((category) => (
           <li key={createId()}>
-            <SidebarLink to={`/${category}`}>{category}</SidebarLink>
+            <SidebarLink to={`/${category[1]}`}>
+              {String(category[0]) === 'All' ? category[0] : category[1]}
+            </SidebarLink>
           </li>
         ))}
       </SidebarList>
