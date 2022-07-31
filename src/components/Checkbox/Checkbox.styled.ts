@@ -6,11 +6,20 @@ export const Label = styled.label`
   cursor: pointer;
 `;
 
-export const CheckboxWrapper = styled.div`
+export const Caption = styled.span`
+  margin-left: 18px;
+`;
+
+export const CheckboxWrapper = styled.div<{ checked: boolean }>`
   display: inline-block;
   vertical-align: middle;
   position: relative;
   top: 2px;
+
+  & + ${Caption} {
+    color: ${({ checked, theme }) =>
+      checked ? theme.colors.primary : 'inherit'};
+  }
 `;
 
 export const Icon = styled.svg`
@@ -45,8 +54,4 @@ export const StyledCheckbox = styled.div<{ checked: boolean }>`
   ${Icon} {
     visibility: ${({ checked }) => (checked ? 'visible' : 'hidden')};
   }
-`;
-
-export const Caption = styled.span`
-  margin-left: 18px;
 `;

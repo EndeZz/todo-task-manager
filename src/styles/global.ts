@@ -6,6 +6,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 10px;
     height: 100%;
+
+    @media only screen and (max-width: ${({ theme }) => theme.media.sm}) {
+      font-size: 8px;
+    }
   }
 
   *,
@@ -20,18 +24,18 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 
     /* Works on Firefox*/
-      scrollbar-color: ${({ theme }) => theme.colors.primary};
-      scrollbar-width: thin;
-      /* Works on Chrome, Edge, and Safari*/
-      &::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-        border-radius: 15px;
-        background-color: ${({ theme }) => theme.colors.gray100};
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.colors.gray200};
-        border-radius: 15px;
+    scrollbar-color: ${({ theme }) => theme.colors.primary};
+    scrollbar-width: thin;
+    /* Works on Chrome, Edge, and Safari*/
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      border-radius: 15px;
+      background-color: ${({ theme }) => theme.colors.gray100};
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors.gray200};
+      border-radius: 15px;
       &:hover {
         background-color: ${({ theme }) => theme.colors.primaryHover};
       }

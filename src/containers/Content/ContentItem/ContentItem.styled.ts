@@ -4,8 +4,16 @@ export const TaskItem = styled.li`
   display: flex;
   justify-content: space-between;
   margin-right: 10px;
+  position: relative;
+  padding: 10px 0;
 
   & button {
+    position: absolute;
+    top: 10px;
+    right: -6px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
     visibility: hidden;
     opacity: 0;
   }
@@ -20,6 +28,7 @@ export const TaskContent = styled.div`
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-wrap: wrap;
 `;
 
 export const TaskCaption = styled.span`

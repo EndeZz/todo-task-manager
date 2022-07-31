@@ -25,7 +25,7 @@ export const Checkbox: FC<CheckboxProps> = ({
 }) => {
   const content = (
     <>
-      <CheckboxWrapper className={className}>
+      <CheckboxWrapper className={className} checked={isChecked}>
         <HiddenCheckbox checked={isChecked} {...attrs} />
         <StyledCheckbox checked={isChecked}>
           <Icon viewBox="0 0 24 24">
