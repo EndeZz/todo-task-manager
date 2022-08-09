@@ -1,5 +1,3 @@
-import { theme } from './theme';
-import { GlobalStyle } from './global';
-import { Container, Main } from './common';
-
-export { GlobalStyle, theme, Container, Main };
+export * from './theme';
+export * from './global';
+export * from './common';

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { Button } from '../../../components/Button';
-import { Checkbox } from '../../../components/Checkbox';
-import { ITask } from '../../../models/ITask';
+import { Button, Checkbox } from '@components';
+import { ITask } from '@models/ITask';
+
 import { TaskCaption, TaskContent, TaskItem } from './ContentItem.styled';
 
 interface ContentItemProps {
@@ -26,7 +26,7 @@ export const ContentItem: FC<ContentItemProps> = ({
     </TaskContent>
 
     <Button onClick={() => handleRemove(item.id)}>
-      <img src="./images/trash.svg" alt="trash icon" />
+      <img src="./images/trash.svg" alt="trash icon" width={16} height={18} />
     </Button>
   </TaskItem>
 );

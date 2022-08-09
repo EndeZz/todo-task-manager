@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { CategoryType } from '../models/ITask';
+import type { CategoryType } from '@models/ITask';
 
 type CategoryParams = {
   category: CategoryType;

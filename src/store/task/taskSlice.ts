@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getLocalStorage } from '../../utils/localStorage';
-import { ITask } from '../../models/ITask';
+import { getLocalStorage } from '@utils/localStorage';
+import { ITask } from '@models/ITask';
 
 interface taskState {
   taskList: ITask[];

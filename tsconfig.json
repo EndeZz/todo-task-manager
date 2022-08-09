@@ -24,5 +24,6 @@
     "src",
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
+  "extends": "./tsconfig.paths.json"
 }

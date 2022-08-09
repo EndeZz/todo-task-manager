@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { setLocalStorage } from '../utils/localStorage';
-import { ITask } from '../models/ITask';
-import taskReducer from './task/taskSlice';
+import { setLocalStorage } from '@utils/localStorage';
+import { ITask } from '@models/ITask';
+import taskReducer from '@store/task/taskSlice';
 
 const rootReducer = combineReducers({
   task: taskReducer,

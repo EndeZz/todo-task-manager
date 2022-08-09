@@ -1,19 +1,13 @@
 import React, { FC, useCallback, useState } from 'react';
-import { Form } from '../../components/Form';
-import { InputField } from '../../components/Input';
-import { sidebarCategories } from '../../constants/sidebarCategories';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { useCategoryPath } from '../../hooks/useCategoryPath';
-import { CategoryType, ITask } from '../../models/ITask';
-import { taskSelector } from '../../store/task/taskSelectors';
-import {
-  addTask,
-  removeTask,
-  toggleCompleted,
-} from '../../store/task/taskSlice';
+import { useAppDispatch, useAppSelector, useCategoryPath } from '@hooks';
+import { Form, InputField } from '@components';
+import { CategoryType, ITask } from '@models/ITask';
+import { sidebarCategories } from '@constants/sidebarCategories';
+import { taskSelector } from '@store/task/taskSelectors';
+import { addTask, removeTask, toggleCompleted } from '@store/task/taskSlice';
+
+import { ContentItem } from './ContentItem';
 import { ContentWrapper, Title, ContentList } from './Content.styled';
-import { ContentItem } from './ContentItem/ContentItem';
 
 export const Content: FC = () => {
   const categoryName = useCategoryPath();

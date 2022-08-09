@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { sidebarCategories } from '../../constants/sidebarCategories';
+import { sidebarCategories } from '@constants/sidebarCategories';
+
 import { SidebarLink, SidebarList, SidebarWrapper } from './Sidebar.styled';
 import { v4 as createId } from 'uuid';
 
